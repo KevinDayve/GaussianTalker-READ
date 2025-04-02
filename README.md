@@ -56,8 +56,9 @@ wget "https://github.com/YudongGuo/AD-NeRF/blob/master/dataset/vids/Obama.mp4?ra
 ```
 
 # Before you process the video, ensure you have the path to the face-parsing model checkpoint.
-#### You can download it like so
+#### You can download it like so (Execute it from the host, not from the docker container).
 ```bash
+cd git/GaussianTalker/data_utils/face_parsing/
 wget https://huggingface.co/OwlMaster/AllFilesRope/resolve/main/79999_iter.pth
 ```
 
