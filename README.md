@@ -55,6 +55,12 @@ cd ~/git/GaussianTalker/data/obama
 wget "https://github.com/YudongGuo/AD-NeRF/blob/master/dataset/vids/Obama.mp4?raw=true" -O obama.mp4
 ```
 
+# Before you process the video, ensure you have the path to the face-parsing model checkpoint.
+#### You can download it like so
+```bash
+wget https://huggingface.co/OwlMaster/AllFilesRope/resolve/main/79999_iter.pth
+```
+
 # Process the video.
 ```bash
 cd /root/GaussianTalker
