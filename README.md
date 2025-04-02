@@ -62,7 +62,7 @@ cd git/GaussianTalker/data_utils/face_parsing/
 wget https://huggingface.co/OwlMaster/AllFilesRope/resolve/main/79999_iter.pth
 ```
 
-# Process the video.
+# Process the video (inside the container)
 ```bash
 cd /root/GaussianTalker
 python3 data_utils/process.py data/obama/obama.mp4
@@ -80,7 +80,7 @@ cd /data
 /home/openface-build/build/bin/FeatureExtraction -f data/obama/obama.mp4
 ```
 
-# Train the model
+# Train the model (inside the container)
 ```bash
 python3 train.py \
   -s data/obama \
@@ -89,7 +89,7 @@ python3 train.py \
 ```
 **This will save checkpoints inside models/obama/.**
 
-# Render Output
+# Render Output (again, inside the container)
 
 You can render a preview without training fully by referencing an early checkpoint:
 ```bash
@@ -102,7 +102,7 @@ python3 render.py \
   --skip_train --skip_test
 ```
 
-With a custom audip
+With a custom audio (again, inside the container)
 ```bash
 python3 render.py \
   -s data/obama \
